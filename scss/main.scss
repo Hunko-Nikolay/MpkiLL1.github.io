@@ -43,51 +43,15 @@ $media-expressions: (
 					margin-top: 5px;
 					text-align: center;
 					transition: .2s linear;
-					&:nth-child(1){
-						border-bottom: 2px solid #000;
-						
-					}
-					&:nth-child(1):hover{
-						box-shadow: 0 -40px 0 0 rgba(0,0,0,.9) inset;
-						border-bottom: 2px solid #eeda00;
-						a{
-							color: white;
-						}
-					}
-					&:nth-child(2){
-						border-left: 2px solid #000;
-					}
-					&:nth-child(2):hover{
-						box-shadow: 200px 0 0 0 rgba(0,0,0,.9) inset;
-						border-left: 2px solid #eeda00;
-						a{
-							color: white;
-						}
-					}         
-					&:nth-child(3):hover{
-						transform: scale(1.1);
-						border-radius: 50%;
-						border: 1px solid #000;
-						
-					}         
-					&:nth-child(4){
-						box-shadow: 0 5px 0 #f4d716;
-						border-radius: 10px;
-					}
-					&:nth-child(5){
-						box-shadow: 0 5px 0 #f4d716;
-						border-radius: 10px;
-					}
 				}
 			}
 		}
 		ul{
 			margin-left: auto;
 			li.nav-item{
-				background-color: #ffea00;
 				margin-right: 5px;
-				a{
-					
+				&:hover{
+					background-color: #ffea00;
 				}
 			}
 		}
@@ -102,7 +66,98 @@ $media-expressions: (
 		}
 		div.container{
 			margin-top: 30px;
-			div.col-lg-3{
+			.col-lg-3{
+				margin-bottom: 30px;
+				div.ghfd{
+					overflow: hidden;
+					position: relative;
+					
+					&:hover div.sdaa{
+						-webkit-transform: translateY(-259px);
+						-ms-transform: translateY(-259px);
+						transform: translateY(-259px);
+					}
+					&:hover div.body{
+							-webkit-transform: translateY(200px);
+							-ms-transform: translateY(200px);
+							transform: translateY(200px);
+							
+						}
+					div.kill{
+						overflow: hidden;		
+						height: 100%;
+						div.body-kill{
+							position: absolute;
+							background-color: #414146;
+							width: 100%;
+							top: 180px;
+							padding: 15px;
+							height: 100%;
+							&:before{
+								content: "";
+							  display: inline-block;
+							  width: 10px;
+							  height: 10px;
+							  -webkit-transform: rotate(135deg);
+							  -ms-transform: rotate(135deg);
+							  transform: rotate(135deg);
+							  position: absolute;
+							  left: calc(100% - 50px);
+							  top: -5px;
+							  background-color: #414146;				  
+							}
+							p{
+							color: white;
+							text-align: left;
+							margin-bottom: 0;
+								a{
+									font-size: 10pt;
+									color: #eeda00;
+								}
+								&:last-child{
+									text-align: right;
+									padding-right: 15px;			
+								}
+							}
+						}
+						img.sda{
+							width: 100%;
+							position: absolute;	
+						}
+					}
+					div.sdaa{
+						transition: 1s all linear;
+						div.all{	
+						position: relative;
+						background-color: #eeda00;
+						border: none;
+						border-radius: 0;
+						position: relative;
+						text-align: center;
+							img{
+								padding: 15px;
+							}
+							h5{
+								text-align: center;
+								padding-bottom: 30px;
+								margin-bottom: 0;
+							}				
+						}
+					}	
+					div.body{
+						background-color: #414146;
+						padding: 0;
+						position: relative;
+						transition: 1s all linear;					
+						p{
+						color: white;
+						text-align: center;
+						padding: 15px;
+						padding-bottom: 30px;
+						margin-bottom: 0;
+						}
+					}		
+				}
 				div.text-center{
 					background-color: #eeda00;
 					padding: 15px;
@@ -192,7 +247,7 @@ $media-expressions: (
 		p{
 			color: white;
 		}
-		div.col-4, .About-us{
+		div.col-sm-12, .About-us{
 			h5{
 				margin-top: 28px;
 				margin-bottom: 28px;
@@ -228,12 +283,14 @@ $media-expressions: (
 					float: left;
 					margin-right: 5px;
 					margin-bottom: 5px;
+					-webkit-transform: scaleX(-1);
+					-ms-transform: scaleX(-1);
 					transform: scaleX(-1);
 					}
 				}
 			}
 		}
-		div.col-sm-5, .Tweets{
+		div.col-sm-12, .Tweets{
 			h5{
 				margin-top: 28px;
 				margin-bottom: 28px;
@@ -241,7 +298,7 @@ $media-expressions: (
 			p{
 				margin-bottom: 10px;
 			}
-			span{
+			a{
 				color: #eeda00;
 				}
 			span.days{
@@ -257,17 +314,18 @@ $media-expressions: (
 				display: inline-block;
 				float: left;
 				margin-right: 10px;
+
 			}
-			i{
+			div.social{
 				margin-left: 2px;
 				color: #000;
-				line-height: 2.5;
+				line-height: 6;
 				&:hover{
 					color: #eeda00;
 				}
 			}
 		}
-		div.col-sm-3{
+		div.col-sm-12{
 			h5{
 				margin-top: 28px;
 				margin-bottom: 28px;
@@ -276,11 +334,11 @@ $media-expressions: (
 				line-height: 1.5;
 				color: #000;
 				&:hover{
-					line-height: 1.5;
 					color: #eeda00;
 				}
 			}
 			p{
+				
 				a{
 					text-decoration: none;
 					color: #eeda00;
@@ -288,14 +346,30 @@ $media-expressions: (
 			}
 			form{
 				display: inline-block;
-				input[type=email]{
+				label{
+					display: inline;
+					input[type=email]{
 					color: #eeda00;
 					outline: none;
 					background-color: #414146;
 					border: none;
 					border-bottom: 2px solid #eeda00;
 					float: left;
-				}
+					}		
+				}	
+				input[type=submit]{
+					border: none;
+					border-bottom: 2px solid #eeda00;;
+					color: white;
+					background-color: black;
+					margin-left: 5px;
+					&:hover{
+						border: none;
+						border-bottom: 2px solid #000;
+						box-shadow: 0 -40px 0 0 rgba(238,218,0,.9) inset;
+						color: black;
+					}
+				}	
 				a{
 					float: right;
 					i{
@@ -346,16 +420,30 @@ $media-expressions: (
 		}
 		div.container-fluid{
 			div.row{
-				div.col-xs-12{
-					div.d-flex{
-						div.p-2{
-							transition-duration: .5s;
-							position: relative;
-							&:hover{
-								opacity: 0.3;
-								color: yellow;
+				div.col-lg-4{
+					padding: 8px;
+					
+					&:hover div.portfolio-hover{
+						opacity: 1;
+					}
+					&:hover div.p-2{
+						opacity: .3;
+					}
+					div.p-2{
+						transition-duration: .5s;
+					}
+					div.portfolio-hover{
+						opacity: 0;
+						position: absolute;
+						top: 30px;
+						right: 30px;
+						left: 30px;
+						bottom: 30px;
+						border: 2px solid #3e4047;
+						transition-duration: .5s;
+						p{
+							font-size: 25pt;
 
-							}
 						}
 					}
 				}
@@ -387,8 +475,9 @@ $media-expressions: (
 							position: relative;
 							padding: 15px;
 							background-color: #ffea00;
-							span{
+							a{
 								text-align: right;
+								color: black;
 							}
 							h4{
 							padding-top: 10px;
@@ -399,6 +488,8 @@ $media-expressions: (
 							  display: inline-block;
 							  width: 20px;
 							  height: 20px;
+							  -webkit-transform: rotate(135deg);
+							  -ms-transform: rotate(135deg);
 							  transform: rotate(135deg);
 							  position: absolute;
 							  left: calc(100% - 50px);
@@ -411,6 +502,11 @@ $media-expressions: (
 					.search{
 						background-color: #424147;
 						padding: 15px;
+						button[type=submit]{
+							outline: none;
+							background-color: #424147;
+							border: none;
+						}
 						i{
 							color: #ffea00;
 						}
@@ -433,6 +529,10 @@ $media-expressions: (
 								color: white;
 								background: url(../images/marker-blog.png) no-repeat left center;
 								padding-left: 40px;
+								margin-bottom: 16px;
+								a{
+									color: white;
+								}
 							}
 						}
 					}
@@ -454,6 +554,10 @@ $media-expressions: (
 								color: white;
 								background: url(../images/marker-blog.png) no-repeat left center;
 								padding-left: 40px;
+								margin-bottom: 16px;
+								a{
+									color: white;
+								}
 							}
 						}
 					}
@@ -472,9 +576,11 @@ $media-expressions: (
 							
 							li{
 								color: white;
-								padding-left: 110px;
 								margin-bottom: 15px;
-								
+								a{
+									color: white;
+
+								}
 								i{
 									color: #ffea00;
 									text-align: right;
@@ -483,6 +589,7 @@ $media-expressions: (
 								p{
 									line-height: 20px;
 									font-size: 15pt;
+									margin-left: 110px;
 								}
 								span{
 									color: #ffea00;
@@ -494,24 +601,11 @@ $media-expressions: (
 									margin-top: 20px;
 
 								}
-								&:first-child{
-								background: url(../images/Popular-post-img-1.png) no-repeat left;
-								}
-								&:nth-child(2){
-								background: url(../images/Popular-post-img-2.png) no-repeat left;
-								}
-								&:nth-child(3){
-								background: url(../images/Popular-post-img-3.png) no-repeat left;
-								}
-								&:nth-child(4){
-								background: url(../images/Popular-post-img-4.png) no-repeat left;
-								}
-								&:last-child{
-								background: url(../images/Popular-post-img-5.png) no-repeat left;
+								img{
+									float: left;
 								}
 							}
 						}
-
 					}
 					.tags{
 						margin-top: 15px;
@@ -533,7 +627,7 @@ $media-expressions: (
 					}
 				}
 				.pagination, .col-lg-8, .col-md-12{
-					a{
+					a.pagination-a{
 						color: black;
 						padding: 8px 16px;
 						text-decoration: none;
@@ -553,23 +647,25 @@ $media-expressions: (
 							background-color: #424147;
 							color: #ffea00;
 						}
-						i{
+						a{
+							i{
 							float: right;
 							margin-left: 15px;
 							padding-top: 5px;
-							span{
-								font-size: 14pt;
-								padding: 7px 15px;
-								background-color: #ffea00;					
-								border-radius: 25%;
-								float: right;
+							color: #424147;
+								span{
+									font-size: 14pt;
+									padding: 7px 15px;
+									background-color: #ffea00;					
+									border-radius: 25%;
+									float: right;
+								}
 							}
-						}
+						}		
 					}
 					hr{
 							height: 2px;
 							border: none;
-							color: #cacaca;
 							background-color: #cacaca;
 						}
 					div.related-posts{
@@ -583,7 +679,6 @@ $media-expressions: (
 						}
 						.card-deck{
 							padding-left: 15px;
-
 						}
 					}
 					div.coments{
@@ -594,30 +689,35 @@ $media-expressions: (
 							padding: 10px 25px 10px 10px;
 							background-color: #424147;
 							color: #ffea00;
-
 						}
-						div.comment{
-							h5{
-								line-height: .5;
-								margin-left: 80px;
-								margin-bottom: 20px;
+						ul{
+							list-style: none;
+							padding-left: 0;
+							li.comment-inside{
+								padding-left: 65px;
 							}
-							img{
-							float: left;
-							margin-left: 15px;
-							}
-							p{
-
-								margin-left: 80px;
-								margin-bottom: 50px;
-							}
-							div.inside-comment{
-								margin-left: 65px;
-								div.double-inside{
+							li.comment{
+								h5{
+									line-height: .5;
+									margin-left: 80px;
+									margin-bottom: 20px;
+								}
+								img{
+								float: left;
+								margin-left: 15px;
+								}
+								p{
+									margin-left: 80px;
+									margin-bottom: 50px;
+								}
+								div.inside-comment{
 									margin-left: 65px;
+									div.double-inside{
+										margin-left: 65px;
+									}
 								}
 							}
-						}
+						}	
 					}
 					div.leave-comment{
 						p.share-post{
